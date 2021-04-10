@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="." method="post">
+        <h3>Podaj tekst do transkrypcji na Slawistyczny Alfabet Fonetyczny:</h3>
+        {{ input_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="OK">
+    </form>
+    <br>
+    {{ translated_text }}
+</body>
+</html>
